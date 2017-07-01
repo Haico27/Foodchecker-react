@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import FoodItem from './FoodItem'
 import Title from '../components/Title'
-import './FoodContainer.sass'
+import './FoodContainer.css'
 
 class FoodContainer extends PureComponent {
   static propTypes = {

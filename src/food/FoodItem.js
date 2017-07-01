@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import './FoodItem.sass'
+import './FoodItem.css'
 
 class FoodItem extends PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    picture: PropTypes.isRequired,
+    picture: PropTypes.string.isRequired,
     tolerated: PropTypes.bool.isRequired,
     ingredients: PropTypes.string.isRequired
   }
