@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
-import Title from './components/Title'
+import FoodContainer from './food/FoodContainer'
 import './App.css';
+
+const foodItems = [
+  {
+    title: "Grapes",
+    picture: "https://groentefruit.files.wordpress.com/2010/04/druiven4.jpg",
+    tolerated: false,
+    ingredients: "Pure grapes"
+  }
+]
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Title content="FoodChecker" />
+        <FoodContainer fooditems={ foodItems } />
       </div>
     );
   }
