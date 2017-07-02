@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import FoodItem from './FoodItem'
 import Title from '../components/Title'
+import { connect } from 'react-redux'
 import './FoodContainer.css'
 
 class FoodContainer extends PureComponent {
@@ -27,4 +28,6 @@ class FoodContainer extends PureComponent {
   }
 }
 
-export default FoodContainer
+const mapStateToProps = ({ fooditems }) => ({ fooditems })
+
+export default connect(mapStateToProps)(FoodContainer)
