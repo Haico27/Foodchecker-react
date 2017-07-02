@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import FoodItem from './FoodItem'
+import FoodEditor from './FoodEditor'
 import Title from '../components/Title'
 import { connect } from 'react-redux'
 import './FoodContainer.css'
@@ -21,6 +22,7 @@ class FoodContainer extends PureComponent {
           <Title content = "FoodChecker" />
         </header>
         <main>
+          <FoodEditor />
           { this.props.fooditems.map(this.renderFoodItem) }
         </main>
       </div>

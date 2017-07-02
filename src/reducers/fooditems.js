@@ -1,3 +1,5 @@
+import { ADD_FOODITEM } from '../actions/addFoodItem'
+
 const foodItems = [
   {
     title: "Grapes",
@@ -15,5 +17,11 @@ const foodItems = [
 ]
 
 export default ( state = foodItems, { type, payload } = {} ) => {
-  return state
+  switch(type) {
+    case ADD_FOODITEM :
+      return [Object.assign({}, payload)].concat(state)
+
+    default :
+      return state
+  }
 }

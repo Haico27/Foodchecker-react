@@ -1,0 +1,10 @@
+.editor {
+  border: 1px solid red;
+  border-radius: 15px;
+  margin: 20px 275px;
+  padding: 20px;
+}
+
+input {
+  margin: 5px
+}
