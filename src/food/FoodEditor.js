@@ -44,7 +44,6 @@ class FoodEditor extends PureComponent {
   }
 
   setTolerated(event) {
-
     this.setState({
       tolerated: event.target.value === 'tolerated'
     })
@@ -100,10 +99,13 @@ class FoodEditor extends PureComponent {
           onChange={ this.updateIngredients.bind(this) }
           onKeyDown={ this.updateIngredients.bind(this) } />
 
-        <label key='tolerated' htmlFor='tolerated'>
-          <input id='tolerated' type="checkbox" name="tolerated" value='tolerated' onChange={ this.setTolerated.bind(this) } />
-            Tolerated?
-        </label>
+        <div className="setTolerated">
+          <label key='tolerated' htmlFor='tolerated'>
+            <input id='tolerated' type='checkbox' name='tolerated' value='tolerated' onChange={ this.setTolerated.bind(this) } />
+              Tolerated?
+          </label>
+        </div>
+
 
 
         <div className="actions">
