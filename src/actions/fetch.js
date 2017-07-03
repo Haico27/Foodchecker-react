@@ -1,6 +1,7 @@
 import API from '../api'
 
 export const FETCHED_FOODITEMS = 'FETCHED_FOODITEMS'
+export const ADD_FOODITEM = 'ADD_FOODITEM'
 
 const api = new API()
 

@@ -13,7 +13,7 @@ class FoodItem extends PureComponent {
   }
 
   render() {
-    const { title, picture, tolerated, ingredients } = this.props
+    const { _id, title, picture, tolerated, ingredients } = this.props
 
     return(
        <article className="fooditem">
@@ -22,7 +22,7 @@ class FoodItem extends PureComponent {
           <div>
 
             <p>
-              <Link to={ ``}>Ingredients: { ingredients }</Link>
+              <Link to={ `/fooditems/${_id}`}>Ingredients: { ingredients }</Link>
             </p>
             <ul>
               { tolerated && <li><span role="img" aria-label="tolerated">✅</span></li> }

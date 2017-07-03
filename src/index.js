@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router history={ history }>
       <Route path="/" component={ App }>
         <IndexRoute component={ FoodContainer } />
-        <Route path="" component={ IngredientsPage } />
+        <Route path="/fooditems/:fooditemId" component={ IngredientsPage } />
       </Route>
     </Router>
   </Provider>,
