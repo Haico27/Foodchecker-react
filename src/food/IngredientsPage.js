@@ -20,6 +20,7 @@ class IngredientsPage extends PureComponent {
         </header>
 
         <main>
+          <h2>See below the ingredients of { title }:</h2>
           <p>{ ingredients }</p>
         </main>
 
