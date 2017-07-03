@@ -4,6 +4,7 @@ import Editor from 'react-medium-editor'
 import 'medium-editor/dist/css/medium-editor.css'
 import 'medium-editor/dist/css/themes/default.css'
 import './FoodEditor.css'
+import addFoodItem from '../actions/addFoodItem'
 
 class FoodEditor extends PureComponent {
   constructor(props) {
@@ -20,23 +21,54 @@ class FoodEditor extends PureComponent {
   }
 
   updateTitle(event) {
-
+    if (event.keyCode === 13) {
+      event.preventDefault()
+      this.refs.summary.medium.elements[0].focus()
+    }
+    this.setState({
+      title: this.refs.title.value
+    })
   }
 
   updatePicture(event) {
-
+    this.setState({
+      picture: this.refs.picture.value
+    })
   }
 
   updateIngredients() {
+    this.setState({
+      ingredients: this.refs.ingredients.value
+    })
 
   }
 
   setTolerated(event) {
 
+    this.setState({
+      tolerated: event.target.value === 'tolerated'
+
+    })
   }
 
   saveFoodItem() {
+    const {
+      title,
+      picture,
+      tolerated,
+      ingredients
+    } = this.state
 
+    const foodItem = {
+      title,
+      picture,
+      tolerated,
+      ingredients
+    }
+
+    this.props.addFoodItem(foodItem)
+
+    console.log(foodItem)
   }
 
   render() {
@@ -69,10 +101,10 @@ class FoodEditor extends PureComponent {
           onChange={ this.updateIngredients.bind(this) }
           onKeyDown={ this.updateIngredients.bind(this) } />
 
-        <label>Tolerated?</label>
-        <input type="radio" onChange={ this.setTolerated.bind(this) } />
-        <input type="radio" onChange={ this.setTolerated.bind(this) } />
-
+        <label key='tolerated' htmlFor='tolerated'>
+          <input id='tolerated' type="checkbox" name="tolerated" value='tolerated' onChange={ this.setTolerated.bind(this) } />
+            Tolerated?
+        </label>
 
 
         <div className="actions">
@@ -83,4 +115,4 @@ class FoodEditor extends PureComponent {
   }
 }
 
-export default FoodEditor
+export default connect(null, { addFoodItem })(FoodEditor)
