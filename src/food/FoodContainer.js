@@ -6,9 +6,17 @@ import Title from '../components/Title'
 import { connect } from 'react-redux'
 import './FoodContainer.css'
 
+import fetchFooditems from '../actions/fetch'
+
 class FoodContainer extends PureComponent {
   static propTypes = {
     fooditems: PropTypes.array.isRequired,
+    fetchFooditems: PropTypes.func.isRequired
+  }
+
+//connects the fetch-action to the props of the foodcontainer
+  componentWillMount() {
+    this.props.fetchFooditems()
   }
 
   renderFoodItem(fooditem, index) {
@@ -32,4 +40,4 @@ class FoodContainer extends PureComponent {
 
 const mapStateToProps = ({ fooditems }) => ({ fooditems })
 
-export default connect(mapStateToProps)(FoodContainer)
+export default connect(mapStateToProps, { fetchFooditems })(FoodContainer)

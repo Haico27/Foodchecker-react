@@ -47,7 +47,6 @@ class FoodEditor extends PureComponent {
 
     this.setState({
       tolerated: event.target.value === 'tolerated'
-
     })
   }
 
