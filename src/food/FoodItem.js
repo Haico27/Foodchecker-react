@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { Link } from 'react-router'
 import './FoodItem.css'
 
 class FoodItem extends PureComponent {
@@ -18,7 +20,10 @@ class FoodItem extends PureComponent {
           <h1>{ title }</h1>
           <img src={ picture } alt="fooditem" />
           <div>
-            <p>{ ingredients }</p>
+
+            <p>
+              <Link to={ ``}>Ingredients: { ingredients }</Link>
+            </p>
             <ul>
               { tolerated && <li><span role="img" aria-label="tolerated">✅</span></li> }
               { !tolerated && <li><span role="img" aria-label="nottolerated">❌</span></li> }

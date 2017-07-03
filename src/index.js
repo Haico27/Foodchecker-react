@@ -6,6 +6,7 @@ import store, { history } from './store'
 import './index.css';
 import App from './App';
 import FoodContainer from './food/FoodContainer'
+import IngredientsPage from './food/IngredientsPage'
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
@@ -13,6 +14,7 @@ ReactDOM.render(
     <Router history={ history }>
       <Route path="/" component={ App }>
         <IndexRoute component={ FoodContainer } />
+        <Route path="" component={ IngredientsPage } />
       </Route>
     </Router>
   </Provider>,
