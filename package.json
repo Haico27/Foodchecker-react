@@ -5,7 +5,7 @@
   "dependencies": {
     "feathers": "^2.1.4",
     "feathers-hooks": "^2.0.1",
-    "feathers-rest": "^1.7.4",
+    "feathers-socketio": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -15,7 +15,7 @@
     "react-router-redux": "4.0.8",
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0",
-    "superagent": "^3.5.2"
+    "socket.io-client": "^2.0.3"
   },
   "devDependencies": {
     "react-scripts": "1.0.10"

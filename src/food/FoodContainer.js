@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import './FoodContainer.css'
 
 import fetchFooditems from '../actions/fetch'
+import subscribeToFooditemService from '../actions/subscribe'
 
 class FoodContainer extends PureComponent {
   static propTypes = {
@@ -17,6 +18,7 @@ class FoodContainer extends PureComponent {
 //connects the fetch-action to the props of the foodcontainer
   componentWillMount() {
     this.props.fetchFooditems()
+    this.props.subscribeToFooditemService()
   }
 
   renderFoodItem(fooditem, index) {
@@ -40,4 +42,6 @@ class FoodContainer extends PureComponent {
 
 const mapStateToProps = ({ fooditems }) => ({ fooditems })
 
-export default connect(mapStateToProps, { fetchFooditems })(FoodContainer)
+export default connect(mapStateToProps, {
+  fetchFooditems,
+  subscribeToFooditemService })(FoodContainer)

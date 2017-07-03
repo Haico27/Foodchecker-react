@@ -1,15 +1,18 @@
-import { ADD_FOODITEM } from '../actions/addFoodItem'
+
 import { FETCHED_FOODITEMS } from '../actions/fetch'
+
+import { FOODITEM_CREATED } from '../actions/subscribe'
 
 
 export default ( state = [], { type, payload } = {} ) => {
   switch(type) {
-    case ADD_FOODITEM :
-      const newFoodItem = Object.assign({}, payload)
-      return [newFoodItem].concat(state)
 
     case FETCHED_FOODITEMS :
       return [].concat(payload)
+
+    case FOODITEM_CREATED :
+      const newFoodItem = { ...payload }
+      return [newFoodItem].concat(state)
 
     default :
       return state

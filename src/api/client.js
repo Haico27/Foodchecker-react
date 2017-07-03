@@ -1,12 +1,16 @@
 import feathers from 'feathers/client'
-import rest from 'feathers-rest/client'
+import socketio from 'feathers-socketio/client'
 import hooks from 'feathers-hooks'
-import superagent from 'superagent'
+import io from 'socket.io-client/dist/socket.io'
 
 const host = 'http://localhost:3030'
 
+const socket = io(host, {
+  transports: ['websocket']
+})
+
 const feathersClient = feathers()
-  .configure(rest(host).superagent(superagent))
   .configure(hooks())
+  .configure(socketio(socket))
 
 export default feathersClient

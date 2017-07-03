@@ -1,7 +1,5 @@
 import API from '../api'
 
-export const ADD_FOODITEM = 'ADD_FOODITEM'
-
 const api = new API()
 
 
@@ -16,8 +14,5 @@ export default (newFoodItem) => {
       console.error('Error', error)
     })
 
-  }
-  return {
-    type: ADD_FOODITEM
   }
 }
