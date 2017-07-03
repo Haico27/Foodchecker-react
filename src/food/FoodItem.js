@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
+import toleratedIcon from '../images/tolerated.svg'
+import notToleratedIcon from '../images/not_tolerated.svg'
 import './FoodItem.css'
 
 class FoodItem extends PureComponent {
@@ -25,8 +27,8 @@ class FoodItem extends PureComponent {
               <Link to={ `/fooditems/${_id}`}>Ingredients</Link>
             </p>
             <ul>
-              { tolerated && <li><span role="img" aria-label="tolerated">✅</span></li> }
-              { !tolerated && <li><span role="img" aria-label="nottolerated">❌</span></li> }
+              { tolerated && <li><img src={ toleratedIcon } alt="tolerated" /></li> }
+              { !tolerated && <li><img src={ notToleratedIcon } alt="not tolerated" /></li> }
             </ul>
           </div>
        </article>
