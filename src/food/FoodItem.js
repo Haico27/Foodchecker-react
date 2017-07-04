@@ -26,7 +26,6 @@ class FoodItem extends PureComponent {
   removeFooditem() {
     const { _id } = this.props
     console.log('CLICK (FoodItem)', _id)
-    console.log('this is remove in FoodItem: ', remove)
     this.props.remove(_id)
   }
 
@@ -42,7 +41,7 @@ class FoodItem extends PureComponent {
     };
 
     return(
-       <article className="fooditem">
+       <article className="fooditem" style={ tolerated ? styleGreen : styleRed }>
           <h1>{ title }</h1>
           <img src={ picture } alt="fooditem" />
           <div>

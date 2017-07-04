@@ -15,7 +15,7 @@ class FoodEditor extends PureComponent {
     this.state = {
       title,
       picture,
-      tolerated,
+      tolerated: false,
       ingredients
     }
   }
@@ -44,9 +44,17 @@ class FoodEditor extends PureComponent {
   }
 
   setTolerated(event) {
-    this.setState({
-      tolerated: event.target.value === 'tolerated'
-    })
+    var checkbox = event.target
+    if (checkbox.checked) {
+      this.setState({
+        tolerated: event.target.value === 'tolerated'
+      })
+
+    } else {
+      this.setState({
+        tolerated: event.target.value === '!tolerated'
+      })
+    }
   }
 
   saveFoodItem() {
@@ -70,6 +78,7 @@ class FoodEditor extends PureComponent {
   }
 
   render() {
+
     return(
       <div className="editor">
         <input
