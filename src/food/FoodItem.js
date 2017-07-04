@@ -19,6 +19,10 @@ class FoodItem extends PureComponent {
     remove: PropTypes.func.isRequired
   }
 
+
+
+
+
   removeFooditem() {
     const { _id } = this.props
     console.log('CLICK (FoodItem)', _id)
@@ -29,8 +33,16 @@ class FoodItem extends PureComponent {
   render() {
     const { _id, title, picture, tolerated, removeFooditem } = this.props
 
+    const styleGreen = {
+      backgroundColor: 'rgba(0, 255, 0, .05)'
+    };
+
+    const styleRed = {
+      backgroundColor: 'rgba(255, 0, 0, .05)'
+    };
+
     return(
-       <article className="fooditem">
+       <article className="fooditem" style={ tolerated ? styleGreen : styleRed }>
           <h1>{ title }</h1>
           <img src={ picture } alt="fooditem" />
           <div>
