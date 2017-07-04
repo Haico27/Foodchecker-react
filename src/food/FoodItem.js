@@ -42,7 +42,7 @@ class FoodItem extends PureComponent {
     };
 
     return(
-       <article className="fooditem" style={ tolerated ? styleGreen : styleRed }>
+       <article className="fooditem">
           <h1>{ title }</h1>
           <img src={ picture } alt="fooditem" />
           <div>

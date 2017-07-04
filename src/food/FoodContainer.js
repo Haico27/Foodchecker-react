@@ -32,13 +32,15 @@ class FoodContainer extends PureComponent {
 
   render() {
     return(
-      <div className="fooditems wrapper">
+      <div className="fooditems page">
         <header>
           <Title content = "FoodChecker" />
         </header>
         <main>
           <FoodEditor />
-          { this.props.fooditems.map(this.renderFoodItem) }
+          <div className="fooditems wrapper">
+            { this.props.fooditems.map(this.renderFoodItem) }
+          </div>
         </main>
       </div>
     )
