@@ -9,10 +9,12 @@ import './FoodContainer.css'
 import fetchFooditems from '../actions/fetch'
 import subscribeToFooditemService from '../actions/subscribe'
 
+
 class FoodContainer extends PureComponent {
   static propTypes = {
     fooditems: PropTypes.array.isRequired,
-    fetchFooditems: PropTypes.func.isRequired
+    fetchFooditems: PropTypes.func.isRequired,
+    subscribeToFooditemService: PropTypes.func.isRequired,
   }
 
 //connects the fetch-action to the props of the foodcontainer
@@ -21,8 +23,11 @@ class FoodContainer extends PureComponent {
     this.props.subscribeToFooditemService()
   }
 
+
   renderFoodItem(fooditem, index) {
-    return <FoodItem key={ index } { ...fooditem } />
+    return (
+        <FoodItem key={ index } { ...fooditem } />
+    )
   }
 
   render() {
@@ -44,4 +49,5 @@ const mapStateToProps = ({ fooditems }) => ({ fooditems })
 
 export default connect(mapStateToProps, {
   fetchFooditems,
-  subscribeToFooditemService })(FoodContainer)
+  subscribeToFooditemService,
+ })(FoodContainer)
