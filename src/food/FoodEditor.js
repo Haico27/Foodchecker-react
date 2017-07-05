@@ -100,6 +100,7 @@ class FoodEditor extends PureComponent {
 
 
 
+
   }
 
   render() {
@@ -110,18 +111,17 @@ class FoodEditor extends PureComponent {
         <input
           type="text"
           ref="title"
-          className="title"
+          className="inputtext"
           placeholder="Title of fooditem"
           defaultValue={ this.state.title }
           onChange={ this.updateTitle.bind(this) }
           onKeyDown={ this.updateTitle.bind(this) } />
-
           { errors.title && <p className="error">{ errors.title }</p> }
 
         <input
           type="text"
           ref="picture"
-          className="picture"
+          className="inputtext"
           placeholder="URL of picture"
           defaultValue={ this.state.picture }
           onChange={ this.updatePicture.bind(this) }
@@ -132,7 +132,7 @@ class FoodEditor extends PureComponent {
         <input
           type="text"
           ref="ingredients"
-          className="picture"
+          className="inputtext"
           placeholder="Ingredients"
           defaultValue={ this.state.ingredients }
           onChange={ this.updateIngredients.bind(this) }
@@ -141,7 +141,7 @@ class FoodEditor extends PureComponent {
           { errors.ingredients && <p className="error">{ errors.ingredients }</p> }
 
         <div className="setTolerated">
-          <label key='tolerated' htmlFor='tolerated'>
+          <label key='tolerated' htmlFor='tolerated' className="checkboxlabel">
             <input id='tolerated' type='checkbox' name='tolerated' value='tolerated' onChange={ this.setTolerated.bind(this) } />
               Tolerated?
           </label>
