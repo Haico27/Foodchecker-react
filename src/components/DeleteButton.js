@@ -18,7 +18,7 @@ class DeleteButton extends PureComponent {
   render() {
     return(
       <div className="removeFooditem">
-        <button onClick={ this.remove.bind(this) } >Remove this item</button>
+        <button className="removebutton" onClick={ this.remove.bind(this) } >Remove this item</button>
       </div>
 
     )

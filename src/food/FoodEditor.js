@@ -150,7 +150,7 @@ class FoodEditor extends PureComponent {
 
 
         <div className="actions">
-          <button className="primary" onClick={ this.saveFoodItem.bind(this) }>Add fooditem</button>
+          <button className="additem" onClick={ this.saveFoodItem.bind(this) }>Add fooditem</button>
         </div>
       </div>
     )

@@ -1,0 +1,13 @@
+.removebutton {
+  width: 100%;
+  border-bottom-right-radius: .5em;
+  border-bottom-left-radius: .5em;
+  border: .1px solid #999;
+  font-size: .5em;
+  padding: .5em;
+  background-color: white;
+
+}
+  .removebutton:hover {
+    font-weight: bold;
+  }

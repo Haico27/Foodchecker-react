@@ -33,26 +33,29 @@ class FoodItem extends PureComponent {
     const { _id, title, picture, tolerated, removeFooditem } = this.props
 
     const styleGreen = {
-      backgroundColor: 'rgba(0, 255, 0, .05)'
+      backgroundColor: 'rgba(0, 255, 0, .05)',
+      boxShadow: '0 1px 6px green, 0 1px 4px blue'
     };
 
     const styleRed = {
-      backgroundColor: 'rgba(255, 0, 0, .05)'
+      backgroundColor: 'rgba(255, 0, 0, .05)',
+      boxShadow: '0 1px 6px red, 0 1px 4px blue'
     };
 
     return(
        <article className="fooditem" style={ tolerated ? styleGreen : styleRed }>
-          <h1>{ title }</h1>
-          <img src={ picture } alt="fooditem" />
+          <header>
+            <h1>{ title }</h1>
+              { tolerated && <p><img className="icon" src={ toleratedIcon } alt="tolerated" /></p> }
+              { !tolerated && <p><img className="icon" src={ notToleratedIcon } alt="not tolerated" /></p> }
+          </header>
+          <img className="item" src={ picture } alt="fooditem" />
           <div>
 
             <p>
               <Link to={ `/fooditems/${_id}`}>Ingredients</Link>
             </p>
-            <ul>
-              { tolerated && <li><img src={ toleratedIcon } alt="tolerated" /></li> }
-              { !tolerated && <li><img src={ notToleratedIcon } alt="not tolerated" /></li> }
-            </ul>
+
             <DeleteButton
               _id = { _id }
               onClick={ this.removeFooditem.bind(this) } />
