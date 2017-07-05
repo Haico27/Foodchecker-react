@@ -2,7 +2,7 @@
   width: 100%;
   border-bottom-right-radius: .5em;
   border-bottom-left-radius: .5em;
-  border: .1px solid #999;
+  border: .1px dotted black;
   font-size: .5em;
   padding: .5em;
   background-color: white;
@@ -10,4 +10,5 @@
 }
   .removebutton:hover {
     font-weight: bold;
+    background-color: #e8e8e8;
   }
