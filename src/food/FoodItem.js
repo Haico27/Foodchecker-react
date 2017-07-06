@@ -50,8 +50,8 @@ class FoodItem extends PureComponent {
               { !tolerated && <p><img className="icon" src={ notToleratedIcon } alt="not tolerated" /></p> }
           </header>
           <img className="item" src={ picture } alt="fooditem" />
-          <div>
 
+          <div>
             <p>
               <Link to={ `/fooditems/${_id}`}>Ingredients</Link>
             </p>
