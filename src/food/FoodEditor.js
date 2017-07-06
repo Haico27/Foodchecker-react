@@ -22,6 +22,7 @@ class FoodEditor extends PureComponent {
   }
 
 
+
   updateTitle(event) {
     if (event.keyCode === 13) {
       event.preventDefault()
@@ -99,6 +100,7 @@ class FoodEditor extends PureComponent {
     if (this.validate(foodItem)) {
       this.props.addFoodItem(foodItem)
       console.log(foodItem)
+
     }
 
 

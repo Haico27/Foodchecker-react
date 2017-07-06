@@ -37,10 +37,18 @@ class FoodContainer extends PureComponent {
           <Title content = "FoodChecker" />
         </header>
         <main>
-          <FoodEditor />
+        <FoodEditor />
+        {
+            this.props.fooditems.length === 0 ?
+          <div className="no-items">
+            <h2>There are no fooditems in your list! Add some items using the editor above.</h2>
+          </div> :
           <div className="fooditems wrapper">
             { this.props.fooditems.map(this.renderFoodItem) }
           </div>
+        }
+
+
         </main>
       </div>
     )
