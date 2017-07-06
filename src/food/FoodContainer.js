@@ -6,6 +6,7 @@ import Title from '../components/Title'
 import { connect } from 'react-redux'
 import './FoodContainer.css'
 
+
 import fetchFooditems from '../actions/fetch'
 import subscribeToFooditemService from '../actions/subscribe'
 
@@ -50,6 +51,8 @@ class FoodContainer extends PureComponent {
 
 
         </main>
+        <footer>
+        </footer>
       </div>
     )
   }

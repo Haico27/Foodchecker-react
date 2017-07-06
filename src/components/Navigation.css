@@ -1,0 +1,26 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: auto;
+}
+
+li {
+  margin-right: 2em;
+  margin-top: .8em;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.link:hover {
+  color: #FFB90F;
+}
+
+.navigation {
+  background-color: black;
+  height: 3em;
+}
