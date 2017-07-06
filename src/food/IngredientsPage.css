@@ -10,7 +10,8 @@
   margin: 3em;
   text-align: justify;
   padding: 1em;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: round;
   background-color: rgba(255, 255, 255, .7) !important;
   background-blend-mode: color;
 }
