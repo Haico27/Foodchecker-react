@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Title from '../components/Title'
 import fetchFooditems from '../actions/fetch'
+import { Link } from 'react-router'
+import './IngredientsPage.css'
 
 class IngredientsPage extends PureComponent {
   static propTypes = {
@@ -17,6 +19,7 @@ class IngredientsPage extends PureComponent {
       <div className="ingredients page">
         <header>
           <Title content={ title } />
+          <Link to={`/`} className="link">Back</Link>
         </header>
 
         <main>
