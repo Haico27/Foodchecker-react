@@ -8,6 +8,7 @@ import App from './App';
 import FoodContainer from './food/FoodContainer'
 import IngredientsPage from './food/IngredientsPage'
 import registerServiceWorker from './registerServiceWorker';
+import AboutPage from './components/AboutPage';
 
 ReactDOM.render(
   <Provider store={ store }>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route path="/" component={ App }>
         <IndexRoute component={ FoodContainer } />
         <Route path="/fooditems/:fooditemId" component={ IngredientsPage } />
+        <Route path="/about" component={ AboutPage } />
       </Route>
     </Router>
   </Provider>,
