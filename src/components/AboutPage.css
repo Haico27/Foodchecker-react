@@ -1,0 +1,9 @@
+.text {
+  color: red;
+  border: 1px solid black;
+  margin: 3em;
+}
+
+p {
+  margin: auto;
+}
