@@ -1,9 +1,16 @@
 .text {
-  color: red;
-  border: 1px solid black;
+  color: black;
+  box-shadow: 0 1px 2px yellow, 0 1px 10px black;
+  border-radius: 15px;
   margin: 3em;
+  text-align: justify;
+  padding: 1em;
 }
 
 p {
+  margin: auto;
+}
+
+.about-page {
   margin: auto;
 }
