@@ -14,8 +14,8 @@
   border-radius: .5em;
   margin: 2%;
   width: 21%;
+  overflow: auto;
 }
-
 header {
   align-items: flex-end;
   display: flex;
