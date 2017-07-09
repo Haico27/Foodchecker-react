@@ -14,7 +14,7 @@ class Navigation extends PureComponent {
         </div>
         <div className="user">
           <ul>
-            <li><Link to={ `/signup` } className="link">Sign up</Link></li>
+            <li><Link to={ `/sign-up` } className="link">Sign Up</Link></li>
           </ul>
         </div>
       </nav>

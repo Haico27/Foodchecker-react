@@ -18,7 +18,7 @@ ReactDOM.render(
         <IndexRoute component={ FoodContainer } />
         <Route path="/fooditems/:fooditemId" component={ IngredientsPage } />
         <Route path="/about" component={ AboutPage } />
-        <Route path="/signup" component={ SignUp } />
+        <Route path="/sign-up" component={ SignUp } />
       </Route>
     </Router>
   </Provider>,
