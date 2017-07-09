@@ -9,6 +9,7 @@ import FoodContainer from './food/FoodContainer'
 import IngredientsPage from './food/IngredientsPage'
 import registerServiceWorker from './registerServiceWorker';
 import AboutPage from './components/AboutPage';
+import SignUp from './users/SignUp'
 
 ReactDOM.render(
   <Provider store={ store }>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <IndexRoute component={ FoodContainer } />
         <Route path="/fooditems/:fooditemId" component={ IngredientsPage } />
         <Route path="/about" component={ AboutPage } />
+        <Route path="/signup" component={ SignUp } />
       </Route>
     </Router>
   </Provider>,

@@ -1,0 +1,11 @@
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px yellow, 0 1px 10px black;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  padding: 1em;
+  width: 50%;
+}
