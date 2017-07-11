@@ -1,5 +1,7 @@
 import API from '../../api'
 
+export const USER_SIGNED_UP = 'USER_SIGNED_UP'
+
 const api = new API()
 
 export default(user) => {

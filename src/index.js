@@ -10,6 +10,7 @@ import IngredientsPage from './food/IngredientsPage'
 import registerServiceWorker from './registerServiceWorker';
 import AboutPage from './components/AboutPage';
 import SignUp from './users/SignUp'
+import SignIn from './users/SignIn'
 
 ReactDOM.render(
   <Provider store={ store }>
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Route path="/fooditems/:fooditemId" component={ IngredientsPage } />
         <Route path="/about" component={ AboutPage } />
         <Route path="/sign-up" component={ SignUp } />
+        <Route path="/sign-in" component={ SignIn } />
       </Route>
     </Router>
   </Provider>,
