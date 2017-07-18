@@ -4,9 +4,9 @@ import hooks from 'feathers-hooks'
 import io from 'socket.io-client/dist/socket.io'
 import auth from 'feathers-authentication-client'
 
-//const host = process.env.API_HOST || 'https://foodchecker-api.herokuapp.com'
+const host = process.env.API_HOST || 'https://foodchecker-api.herokuapp.com'
 
-const host = 'http://localhost:3030'
+//const host = 'http://localhost:3030'
 
 export const FEATHERS_TOKEN_KEY = 'foodcheckerKey'
 
