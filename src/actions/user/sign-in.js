@@ -23,6 +23,7 @@ export default(user) => {
           type: USER_SIGNED_IN,
           payload: user
         })
+        console.log('user.data in sign-in action: ', user)
       })
       .catch((error) => {
         console.log('Error authenticating user!', error.message)

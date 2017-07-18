@@ -8,6 +8,8 @@ import auth from 'feathers-authentication-client'
 
 const host = 'http://localhost:3030'
 
+export const FEATHERS_TOKEN_KEY = 'foodcheckerKey'
+
 const socket = io(host, {
   transports: ['websocket']
 })
@@ -17,6 +19,7 @@ const feathersClient = feathers()
   .configure(socketio(socket))
   .configure(auth({
     storage: window.localStorage,
+    storageKey: FEATHERS_TOKEN_KEY
   }))
 
 export default feathersClient

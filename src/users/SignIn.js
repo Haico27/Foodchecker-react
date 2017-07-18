@@ -1,21 +1,23 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { replace } from 'react-router-redux'
 import Title from '../components/Title'
 import { Link } from 'react-router'
 import signIn from '../actions/user/sign-in'
 import './SignIn.css'
 
 export class SignIn extends PureComponent {
-  constructor(props) {
-    super()
 
-    this.state = {}
-  }
 
   static propTypes = {
     signIn: PropTypes.func.isRequired,
-    signedIn: PropTypes.bool
+    signedIn: PropTypes.bool.isRequired,
+  }
+
+  componentWillMount() {
+    const { replace, signedIn } = this.props
+    if (signedIn) replace('/')
   }
 
   submitForm(event) {
@@ -65,4 +67,6 @@ const mapStateToProps = ({ currentUser }) => ({
   signedIn: !!currentUser && !!currentUser._id,
 })
 
-export default connect(mapStateToProps, { signIn })(SignIn)
+
+
+export default connect(mapStateToProps, { signIn, replace })(SignIn)
